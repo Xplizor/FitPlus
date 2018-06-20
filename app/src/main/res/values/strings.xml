@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FitPlus</string>
+    <string name="title_activity_register">Registratie</string>
+    <string name="first_name">Voornaam</string>
+    <string name="last_name">Achternaam</string>
+    <string name="birth_date">Geboorte datum</string>
+    <string name="register_button">Registreer</string>
 </resources>
