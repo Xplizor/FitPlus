@@ -30,15 +30,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
                 Button button = buttonsNjan[position];
-
-                Context context = getApplicationContext();
-                CharSequence text = button.titleNjan;
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast.makeText(context, text, duration).show();
-
-                // This tells the GridView to redraw itself
-                // in turn calling your BooksAdapter's getView method again for each cell
                 Intent intent;
 
                 switch (button.imageNjan) {
