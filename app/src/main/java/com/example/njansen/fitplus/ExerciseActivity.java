@@ -20,10 +20,12 @@ public class ExerciseActivity extends AppCompatActivity {
         TextView headNjan = (TextView) findViewById(R.id.txvHeadNjan);
         TextView exerciseNjan = (TextView) findViewById(R.id.txvExcerciseNjan);
 
-        titleNjan.setText(R.string.ex1Title);
-        subTitleNjan.setText(R.string.ex1SubTitle);
-        headNjan.setText(R.string.ex1Head);
-        exerciseNjan.setText(R.string.ex1Exercise);
+        String[] ex1 = getResources().getStringArray(R.array.ex1);
+
+        titleNjan.setText(ex1[0]);
+        subTitleNjan.setText(ex1[1]);
+        headNjan.setText(ex1[2]);
+        exerciseNjan.setText(ex1[3]);
     }
 
     public void CheckNjan(View view) {
