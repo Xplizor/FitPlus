@@ -1,6 +1,8 @@
 package com.example.njansen.fitplus;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,9 +39,35 @@ public class MainActivity extends AppCompatActivity {
 
                 // This tells the GridView to redraw itself
                 // in turn calling your BooksAdapter's getView method again for each cell
-                gridAdapter.notifyDataSetChanged();
+                Intent intent;
+
+                switch (button.imageNjan) {
+                    case R.drawable.ic_excersie:
+                        intent = new Intent(getApplicationContext(), ExerciseActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.drawable.ic_settings:
+                        intent = new Intent(getApplicationContext(), SettingsActivity.class);
+                        startActivity(intent);
+                        break;
+                    default:
+
+                }
             }
         });
+    }
+
+    public void LogOutNjan(View view) {
+        SharedPreferences prefNjan = getSharedPreferences("settings", 0);
+
+        SharedPreferences.Editor mEditor = prefNjan.edit();
+        mEditor.putString("firstName", "").apply();
+        mEditor.putString("lastName", "").apply();
+        mEditor.putBoolean("registered", false).apply();
+
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 
     class Button {

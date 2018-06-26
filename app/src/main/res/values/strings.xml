@@ -5,4 +5,5 @@
     <string name="last_name">Achternaam</string>
     <string name="birth_date">Geboorte datum</string>
     <string name="register_button">Registreer</string>
+    <string name="logout_button">Uitloggen</string>
 </resources>
